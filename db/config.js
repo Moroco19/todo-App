@@ -1,3 +1,5 @@
+const DB_NAME = process.env.DB_NAME || "todos";
+
 const options = {
     query: (e) => {
         console.log(e.query);
