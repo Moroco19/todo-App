@@ -1,3 +1,4 @@
+require('dotenv').config();
 const DB_NAME = process.env.DB_NAME || "todos";
 
 const options = {
@@ -11,7 +12,7 @@ const pgp = require('pg-promise')(options);
 function setDatabase() {
     if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
         return pgp({
-            database: 'todos_dev',
+            database: DB_NAME,
             port: 5432,
             host: 'localhost'
         });
