@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const todoRouter = require('./routes/todo-router');
 
 const app = express();
-require('dotenv').config();
+// require('dotenv').config();
 
 app.use(methodOverride('_method'));
 app.use(logger('dev'));
