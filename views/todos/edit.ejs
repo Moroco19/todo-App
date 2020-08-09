@@ -4,6 +4,10 @@
         <input name="title" type="text" value="<%= todo.title %>" placeholder="Title" />
         <input name="category" type="text" value="<%= todo.category %>" placeholder="Category" />
         <input name="description" type="text" value="<%= todo.description %>" placeholder="Description" />
+        <input name="status" type="radio" id="to-do" value="To-Do"  />
+        <label for="to-do">To Do</label>
+        <input name="status" type="radio" id="done" value="Done"  />
+        <label for="done">Done</label>
         <input type="submit" value="Save" />
     </form>
     <a href="/todos/">Cancel</a>

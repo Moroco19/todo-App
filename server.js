@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 
 app.use('/todos', todoRouter);
 app.use('/auth', authRouter);
-app.use('/users', userRouter);
+app.use('/user', userRouter);
 
 app.use('*', (req, res) => {
     res.status(404).send({

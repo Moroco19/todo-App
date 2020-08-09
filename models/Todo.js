@@ -5,9 +5,9 @@ class Todo {
         this.id = id || null;
         this.title = title;
         this.description = description;
-        this.status = `To-Do`//status;
+        this.status = status;
         this.category = category;
-        this.user_id = 1;// user_id;
+        this.user_id = user_id;
     }
 
     static getAll() {

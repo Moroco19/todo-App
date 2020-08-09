@@ -16,6 +16,7 @@ const userController = {
             username: req.body.username,
             email: req.body.email,
             password_digest: hash,
+            name: req.body.name,
         })
         .save()
         .then((user) => {
@@ -24,7 +25,7 @@ const userController = {
                 res.redirect('/user');
             });
         })
-        .catch(nex);
+        .catch(next);
     }
 }
 
