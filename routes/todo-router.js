@@ -4,10 +4,10 @@ const todoRouter = express.Router();
 const todoController = require('../controllers/todo-controller');
 
 todoRouter.get('/', todoController.index);
-todoRouter.post('/', todoController.create);
-todoRouter.get('/new', (req, res) => {
+todoRouter.get('/add', (req, res) => {
     res.render('todos/add');
 });
+todoRouter.post('/', todoController.create);
 todoRouter.get('/:id([0-9]+)', todoController.show, (req, res) => {
     res.render('todos/show', {
         todo: res.locals.todo,

@@ -1,0 +1,13 @@
+<%- include('../partials/boilerplate') %>
+    
+    <div>
+        <form method="POST" action="/todos">
+            <input name="title" type="text" placeholder="Title" />
+            <input name="category" type="text" placeholder="Category" />
+            <input name="description" type="text" placeholder="Description" />
+            <input type="submit" value="Submit" />
+        </form>
+        <a href="/todos/">Back to List</a>
+    </div>
+
+<%- include('../partials/end') %>

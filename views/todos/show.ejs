@@ -1,0 +1,17 @@
+<%- include('../partials/boilerplate') %>
+
+    <div>
+        <h3><%= todo.title %></h3>
+        <p><%= todo.status %></p>
+        <p><%= todo.category %></p>
+        <p><%= todo.description %></p>
+        <form method="GET" action="/todos/<%= todo.id %>?_method=PUT">
+            <input type="submit" value="EDIT">
+        </form>
+        <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+            <input type="submit" value="DEL">
+        </form>
+        <a href="/todos/">Back to List</a>
+    </div>
+
+<%- include('../partials/end') %>

@@ -3,8 +3,9 @@
     <div>
         <% for (let todo of data.todos) { %>
             <h3><%= todo.name %></h3>
+            <p><%= todo.category %></p>
             <a href="/todos/<%= todo.id %>">Info</a>
-            <form method="GET" action="/todos/<%= todo.id %>">
+            <form method="GET" action="/todos/<%= todo.id %>?_method=PUT">
                 <input type="submit" value="EDIT">
             </form>
             <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">

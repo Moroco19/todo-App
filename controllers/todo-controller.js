@@ -24,9 +24,9 @@ const todoController = {
         new Todo ({
             title:  req.body.title,
             description: req.body.description,
-            status: req.body.status,
+            // status: req.body.status,
             category: req.body.category,
-            user_id: req.body.user_id,
+            // user_id: req.body.user_id,
         })
             .save()
             .then(() => {
