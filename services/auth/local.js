@@ -1,17 +1,19 @@
-const passport = require('./passport');
+const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 const User = require('../../models/User');
 const authHelpers = require('./auth-helpers');
 
+const init = require('./passport');
+
 const options = {};
+
+init();
 
 passport.use(
     new LocalStrategy(options, (username, password, done) => {
-        console.log('local strategy');
         User.findByUserName(username)
             .then((user) => {
-                console.log(user);
                 if (!user) {
                     return done(null, false);
                 }
@@ -27,8 +29,8 @@ passport.use(
             .catch((err) => {
                 console.log(err);
                 return done(err);
-            })
+            });
     })
-)
+);
 
 module.exports = passport;

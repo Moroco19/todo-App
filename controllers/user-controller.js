@@ -5,7 +5,7 @@ const userController = {
     index(req, res, next) {
         res.json({
             message: "Need to add user profile page here",
-            data: { user: req.user }
+            data: { user: req.user },
         })
     },
 

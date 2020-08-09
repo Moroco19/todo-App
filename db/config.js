@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const DB_NAME = process.env.DB_NAME || "todos";
 
 const options = {
