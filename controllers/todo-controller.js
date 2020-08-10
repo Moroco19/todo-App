@@ -2,7 +2,7 @@ const Todo = require('../models/Todo');
 
 const todoController = {
     index(req, res, next) {
-        Todo.getAll(req.user)
+        Todo.getAll()
             .then((todos) => {
                 res.render('todos/index', {
                     data: { todos },
