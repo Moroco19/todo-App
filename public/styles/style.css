@@ -1,5 +1,5 @@
 /* Global Styling */
-body, footer, .nav, form, .todos, .todo, .todo-single, .todo-upper, .todo-lower, .lwr-left, .lwr-right  {
+body, footer, .nav, form, .user-container, .about, .todos, .todo, .todo-single, .todo-upper, .todo-lower, .lwr-left, .lwr-right  {
     display: flex;
 }
 
@@ -27,6 +27,7 @@ a {
 
 form {
     flex-direction: column;
+    align-items: center;
 }
 
 input {
@@ -49,12 +50,22 @@ button, input[type=submit] {
 
 }
 
+.addnewdiv {
+    position: static;
+    padding-top: 3vh;
+}
+
+.new {
+    width: 84px;
+    height: 35px;
+}
+
 /* views/partials/nav */
 .nav {
     min-width: 100vw;
     height: 20px;
     justify-content: space-between;
-    border-bottom: black solid;
+    border-bottom: silver solid;
     position: absolute;
     top: 0;
     background-color: white;
@@ -70,7 +81,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-width: 100vw;
-    border-top: black solid;
+    border-top: silver solid;
     position: fixed;
     bottom: 0;
     background-color: white;
@@ -81,17 +92,26 @@ footer {
     padding: 4vh 0;
 }
 
-/* views/auth/login */
+/* views/auth/login and register */
+.user-container, .about {
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 30vw;
+    padding: 10px;
+    margin: 10px;
+    background-color: silver;
+    border-radius: 10px;
+}
 
-/* views/auth/register */
-
-/* views/todos/add */
-
-/* views/todos/edit */
+.about {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 /* views/todos/index */
 .todos {
-    background-color: tomato;
     flex-direction: column;
     width: 80vw;
 }
@@ -101,7 +121,7 @@ footer {
     height: 50px;
     padding: 10px;
     margin: 10px;
-    background-color: teal;
+    background-color: silver;
     border-radius: 10px;
 }
 
@@ -110,6 +130,10 @@ footer {
     justify-content: space-between;
     flex-grow: inherit;
     flex-wrap: wrap;
+}
+
+.todo-upper {
+    border-bottom: black double;
 }
 
 .lwr-left, .lwr-right {
@@ -122,7 +146,7 @@ footer {
     margin-top: 2vh;
 }
 
-/* views/todos/show */
+/* views/todos/show add and edit */
 .todo-single {
     flex-direction: column;
     flex-grow: .5;
@@ -132,6 +156,6 @@ footer {
     width: 30vw;
     padding: 10px;
     margin: 10px;
-    background-color: teal;
+    background-color: silver;
     border-radius: 10px;
 }

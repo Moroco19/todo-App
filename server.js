@@ -45,6 +45,9 @@ app.get('/', (req, res) => {
 app.use('/todos', todoRouter);
 app.use('/auth', authRouter);
 app.use('/user', userRouter);
+app.use('/about', (req, res) => {
+    res.render('about');
+});
 
 app.use('*', (req, res) => {
     res.status(404).send({
