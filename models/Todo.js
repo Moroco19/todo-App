@@ -9,10 +9,10 @@ class Todo {
         this.category = category;
         this.user_id = user_id;
     }
-
-    static getAll() {
+//
+    static getAll(user) {
         return db
-            .query('SELECT * FROM todos')
+            .query('SELECT * FROM todos JOIN users ON users.id = todos.user_id WHERE users.id = $1', user.id)
             .then((todos) => todos.map((todo) => new this(todo)));
     }
 

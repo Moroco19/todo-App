@@ -4,7 +4,7 @@ const todoRouter = express.Router();
 const todoController = require('../controllers/todo-controller');
 const authHelpers = require('../services/auth/auth-helpers');
 
-todoRouter.get('/', todoController.index);
+todoRouter.get('/', authHelpers.loginRequired, todoController.index);
 todoRouter.get('/add', authHelpers.loginRequired, (req, res) => {
     res.render('todos/add');
 });
