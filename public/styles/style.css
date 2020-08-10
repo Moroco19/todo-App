@@ -75,6 +75,15 @@ button, input[type=submit] {
     margin: 0 10px;
 }
 
+#midli {
+    border-left: silver solid;
+    border-right: silver solid;
+}
+
+.active {
+    background-color: skyblue;
+}
+
 /* views/partials/end */
 
 footer {
