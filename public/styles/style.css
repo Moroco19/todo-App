@@ -1,0 +1,137 @@
+/* Global Styling */
+body, footer, .nav, form, .todos, .todo, .todo-single, .todo-upper, .todo-lower, .lwr-left, .lwr-right  {
+    display: flex;
+}
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20%;
+}
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+button, input[type=submit] {
+    text-align: center;
+    padding: .1em;
+    margin: .1em;
+    border: none;
+    cursor: pointer;
+    min-width: 42px;
+    max-width: 100px;
+    border-radius: 10px;
+
+}
+
+/* views/partials/nav */
+.nav {
+    min-width: 100vw;
+    height: 20px;
+    justify-content: space-between;
+    border-bottom: black solid;
+    position: absolute;
+    top: 0;
+    background-color: white;
+}
+
+.logo {
+    margin: 0 10px;
+}
+
+/* views/partials/end */
+
+footer {
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    border-top: black solid;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+}
+
+/* views/index */
+.home-credentials {
+    padding: 4vh 0;
+}
+
+/* views/auth/login */
+
+/* views/auth/register */
+
+/* views/todos/add */
+
+/* views/todos/edit */
+
+/* views/todos/index */
+.todos {
+    background-color: tomato;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.todo {
+    flex-direction: column;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    background-color: teal;
+    border-radius: 10px;
+}
+
+.todo-upper, .todo-lower {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: inherit;
+    flex-wrap: wrap;
+}
+
+.lwr-left, .lwr-right {
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.addnewdiv {
+    margin-top: 2vh;
+}
+
+/* views/todos/show */
+.todo-single {
+    flex-direction: column;
+    flex-grow: .5;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 30vw;
+    padding: 10px;
+    margin: 10px;
+    background-color: teal;
+    border-radius: 10px;
+}
