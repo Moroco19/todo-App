@@ -6,10 +6,10 @@
         <p><%= todo.category %></p>
         <p><%= todo.description %></p>
         <form method="GET" action="/todos/<%= todo.id %>/edit?_method=PUT">
-            <input type="submit" value="EDIT">
+            <input type="submit" value="Edit">
         </form>
         <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
-            <input type="submit" value="DEL">
+            <input type="submit" value="Delete">
         </form>
         <a href="/todos/"><button>Back to List</button></a>
     </div>
