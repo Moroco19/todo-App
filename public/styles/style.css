@@ -106,7 +106,8 @@ footer {
 
 /* views/auth/login and register */
 .user-container, .about {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 250px;
     width: 30vw;
