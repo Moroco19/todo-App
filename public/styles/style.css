@@ -47,7 +47,10 @@ button, input[type=submit] {
     min-width: 42px;
     max-width: 100px;
     border-radius: 10px;
+}
 
+button:hover, input[type=submit]:hover {
+    background-color: skyblue;
 }
 
 .addnewdiv {
