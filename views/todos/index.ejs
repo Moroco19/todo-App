@@ -1,17 +1,28 @@
 <%- include('../partials/boilerplate'); %>
-<%- include('../partials/nav'); %>
-    <a href="/todos/add" class="button">Add New Todo!</a>
-    <div>
+    <div class="addnewdiv">
+        <a href="/todos/add"><button class="new">New Todo!</button></a>
+    </div>
+    <div class="todos">
         <% for (let todo of data.todos) { %>
-            <h3><%= todo.name %></h3>
-            <p><%= todo.category %></p>
-            <a href="/todos/<%= todo.id %>">Info</a>
-            <form method="GET" action="/todos/<%= todo.id %>?_method=PUT">
-                <input type="submit" value="EDIT">
-            </form>
-            <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
-                <input type="submit" value="DEL">
-            </form>
+            <div class="todo">
+                <div class="todo-upper">
+                    <h3><%= todo.title %></h3>
+                    <p><%= todo.status %></p>
+                </div>
+                <div class="todo-lower">
+                    <div class="lwr-left">
+                        <p><%= todo.category %></p>
+                    </div>
+                    <div class="lwr-right">
+                        <a href="/todos/<%= todo.id %>"><button>Info</button></a>
+                        <a href="/todos/<%= todo.id %>/edit"><button>Edit</button></a>
+                        <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+                </div>
+            </div>
         <% } %>
     </div>
+
 <%- include('../partials/end'); %>

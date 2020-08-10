@@ -1,11 +1,9 @@
 <%- include('./partials/boilerplate'); %>
-<%- include('./partials/nav'); %>
-<h1>Hello there</h1>
 <h1>Welcome to the Todo App</h1>
-<div>
-    <a href="/auth/login">Login</a>
-</div>
-<div>
-    <a href="/user/new">Register</a>
+<div class="home-credentials">
+    <ul>
+        <li><a href="/auth/login"><button>Login</button></a></li>
+        <li><a href="/user/new"><button>Register</button></a></li>
+    </ul>
 </div>
 <%- include('./partials/end'); %>
