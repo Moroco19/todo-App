@@ -55,7 +55,7 @@ class Todo {
     }
 
     delete() {
-        return db.non('DELETE FROM todos WHERE id = $/id/', this);
+        return db.none('DELETE FROM todos WHERE id = $/id/', this);
     }
 }
 
