@@ -3,10 +3,7 @@ const User = require('../models/User');
 
 const userController = {
     index(req, res, next) {
-        res.json({
-            message: "Need to add user profile page here",
-            data: { user: req.user },
-        })
+        res.redirect('/todos');
     },
 
     create(req, res, next) {
@@ -22,7 +19,7 @@ const userController = {
         .then((user) => {
             req.login(user, (err) => {
                 if (err) return next(err);
-                res.redirect('/user');
+                res.redirect('/todos');
             });
         })
         .catch(next);
