@@ -1,5 +1,5 @@
 /* Global Styling */
-body, footer, .nav, form, .user-container, .about, .todos, .todo, .todo-single, .todo-upper, .todo-lower, .lwr-left, .lwr-right  {
+body, footer, .nav, form, .user-container, .about, .container, .todos, .finished, .todo, .todo-single, .todo-upper, .todo-lower, .lwr-left, .lwr-right  {
     display: flex;
 }
 
@@ -123,9 +123,14 @@ footer {
 }
 
 /* views/todos/index */
-.todos {
-    flex-direction: column;
+.container {
+    flex-direction: row;
     width: 80vw;
+}
+
+.todos, .finished {
+    flex-direction: column;
+    width: 40vw;
 }
 
 .todo {

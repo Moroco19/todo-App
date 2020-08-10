@@ -1,0 +1,18 @@
+<div class="todo">
+    <div class="todo-upper">
+        <h3><%= todo.title %></h3>
+        <p><%= todo.status %></p>
+    </div>
+    <div class="todo-lower">
+        <div class="lwr-left">
+            <p><%= todo.category %></p>
+        </div>
+        <div class="lwr-right">
+            <a href="/todos/<%= todo.id %>"><button>Info</button></a>
+            <a href="/todos/<%= todo.id %>/edit"><button>Edit</button></a>
+            <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
+</div>
